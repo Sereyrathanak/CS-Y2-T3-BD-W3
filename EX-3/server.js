@@ -6,10 +6,9 @@ import validateQuery from "./middleware/validateQuery.js";
 const app = express();
 const PORT = 3000;
 
-// Q1: Apply logger globally (runs for every single request)
 app.use(logger);
 
-// Q2: Apply validateQuery ONLY to the specific course route
+
 app.get('/departments/:dept/courses', validateQuery, (req, res) => {
     const { dept } = req.params;
     const { level, minCredits, maxCredits, semester, instructor } = req.query;

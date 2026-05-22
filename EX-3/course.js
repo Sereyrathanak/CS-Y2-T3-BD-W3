@@ -1,4 +1,4 @@
-// course.js
+
 const courses = [
     {
         id: 'CSE101',
